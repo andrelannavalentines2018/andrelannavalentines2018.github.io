@@ -1,0 +1,74 @@
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+            <link rel="icon" href="images/heart.PNG">
+            <title>happy valentines!</title>
+    </head>
+
+    <style>
+            @import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+    </style>
+
+    <body>
+        <!-- Header -->
+<div class="header">
+        <h1 style=font-size:150px>Happy Valentines Day!</h1>
+        <p>-from Andre with 💖</p>
+        <div id="heart"></div>
+</div>
+      
+      <div class="row"> 
+        <div class="column" id="1">
+        </div>
+        <div class="column" id="2">
+        </div>  
+        <div class="column" id="3">
+        </div>
+        <div class="column" id="4">
+        </div>
+      </div>
+    </body>
+
+
+
+
+    <script>
+            function getRandom() {
+                var x = Math.floor((Math.random() * 4) + 1);
+                var div1 = document.getElementById('1');
+                var div2 = document.getElementById('2');
+                var div3 = document.getElementById('3');
+                var div4 = document.getElementById('4');
+                var randomPicture = Math.floor((Math.random() * 60) + 1);
+                for(i = 0; i < 15; i++){
+                    var randomPicture = Math.floor((Math.random() * 60) + 1);
+                    if(randomPicture == 29){
+                        div1.innerHTML += '<img src="images/29.GIF" style="width:100%">'
+                        continue;
+                    }else{
+                        div1.innerHTML += '<img src ="images/'+randomPicture+'.JPG" style="width:100%">'
+                        var randomPicture = randomExcluded(1, 60, 29)
+                        div2.innerHTML += '<img src ="images/'+randomPicture+'.JPG" style="width:100%">';
+                        var randomPicture = randomExcluded(1, 60, 29)
+                        div3.innerHTML += '<img src ="images/'+randomPicture+'.JPG" style="width:100%">';
+                        var randomPicture = randomExcluded(1, 60, 29)
+                        div4.innerHTML += '<img src ="images/'+randomPicture+'.JPG" style="width:100%">';
+                
+                    }
+
+                }
+        
+            }
+
+            function randomExcluded(min, max, excluded) {
+                var n = Math.floor(Math.random() * (max-min) + min);
+                if (n >= excluded) n++;
+                return n;
+            }
+
+            getRandom();
+            </script>
+        
+
+
+</html>
