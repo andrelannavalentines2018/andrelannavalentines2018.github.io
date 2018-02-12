@@ -1,5 +1,6 @@
 <html>
     <head>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
             <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
             <link rel="icon" href="images/heart.png">
             <title>happy valentines!</title>
@@ -40,7 +41,7 @@
                 var div3 = document.getElementById('3');
                 var div4 = document.getElementById('4');
                 var randomPicture = Math.floor((Math.random() * 60) + 1);
-                for(i = 0; i < 15; i++){
+                for(i = 0; i < 25; i++){
                     var randomPicture = Math.floor((Math.random() * 60) + 1);
                     if(randomPicture == 29){
                         div1.innerHTML += '<img src="images/29.GIF" style="width:100%">'
@@ -66,7 +67,18 @@
                 return n;
             }
 
+
+            (function ($) {
+                
+                        $(window).on('load', function () {
+                            $(Document.HTML).fadeIn(5000);
+                        });
+                
+                    })(jQuery);
+
             getRandom();
+
+
             </script>
         
 
