@@ -188,3 +188,11 @@ body{
   @keyframes love {
     0%{top:110%}
   }
+
+  body {
+    background: #B7004E;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
